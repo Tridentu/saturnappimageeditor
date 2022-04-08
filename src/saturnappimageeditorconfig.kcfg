@@ -8,9 +8,5 @@ SPDX-FileCopyrightText: %{CURRENT_YEAR} %{AUTHOR} <%{EMAIL}>
 SPDX-License-Identifier: LGPL-2.0-or-later
 -->
     <group name="General">
-        <entry name="someSetting" type="Bool">
-            <label>Some setting description</label>
-            <default>true</default>
-        </entry>
     </group>
 </kcfg>

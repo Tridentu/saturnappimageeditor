@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  SPDX-License-Identifier: FSFAP
+  SPDX-FileCopyrightText: %{CURRENT_YEAR} %{AUTHOR} <%{EMAIL}>
+ -->
+<component type="desktop-application">
+  <id>io.github.tridentu.saturnappimageeditor</id>
+  <name>Saturn AppImage Editor</name>
+  <summary>An Editor for AppImage Desktop Entries.</summary>
+  <metadata_license>FSFAP</metadata_license>
+  <project_license>GPL-2.0</project_license>
+  <developer_name>Tridentu Group</developer_name>
+  <description>
+      <p>This application is used for editing the .desktop files under "~/Applications/.entries" .</p>
+  </description>
+</component>

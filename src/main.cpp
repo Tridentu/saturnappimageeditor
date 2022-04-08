@@ -21,36 +21,36 @@ Q_DECL_EXPORT int main(int argc, char *argv[])
 {
     QGuiApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QApplication app(argc, argv);
-    QCoreApplication::setOrganizationName(QStringLiteral("KDE"));
+    QCoreApplication::setOrganizationName(QStringLiteral("Tridentu Group"));
     QCoreApplication::setApplicationName(QStringLiteral("saturnappimageeditor"));
 
     KAboutData aboutData(
                          // The program name used internally.
                          QStringLiteral("saturnappimageeditor"),
                          // A displayable program name string.
-                         i18nc("@title", "saturnappimageeditor"),
+                         i18nc("@title", "Saturn AppImage Editor"),
                          // The program version string.
                          QStringLiteral(SATURNAPPIMAGEEDITOR_VERSION_STRING),
                          // Short description of what the app does.
-                         i18n("Application Description"),
+                         i18n("An editor for .desktop entry files under \"~/Applications/.entries\"."),
                          // The license this code is released under.
                          KAboutLicense::GPL,
                          // Copyright Statement.
-                         i18n("(c) %{CURRENT_YEAR}"));
-    aboutData.addAuthor(i18nc("@info:credit", "AUTHOR"), i18nc("@info:credit", "Author Role"), QStringLiteral("%{EMAIL}"), QStringLiteral("https://yourwebsite.com"));
+                         i18n("(c) 2022"));
+    aboutData.addAuthor(i18nc("@info:credit", "Tridentu Group"));
     KAboutData::setApplicationData(aboutData);
 
     QQmlApplicationEngine engine;
 
     auto config = saturnappimageeditorConfig::self();
 
-    qmlRegisterSingletonInstance("org.kde.saturnappimageeditor", 1, 0, "Config", config);
+    qmlRegisterSingletonInstance("io.github.tridentu.saturnappimageeditor", 1, 0, "Config", config);
 
     AboutType about;
-    qmlRegisterSingletonInstance("org.kde.saturnappimageeditor", 1, 0, "AboutType", &about);
-
+    qmlRegisterSingletonInstance("io.github.tridentu.saturnappimageeditor", 1, 0, "AboutType", &about);
+    
     App application;
-    qmlRegisterSingletonInstance("org.kde.saturnappimageeditor", 1, 0, "App", &application);
+    qmlRegisterSingletonInstance("io.github.tridentu.saturnappimageeditor", 1, 0, "App", &application);
 
     engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
     engine.load(QUrl(QStringLiteral("qrc:///main.qml")));

@@ -3,7 +3,8 @@
 
 cmake_minimum_required(VERSION 3.16)
 
-project(saturnappimageeditor VERSION 0.1)
+project(saturnappimageeditor VERSION 1.0)
+set(CMAKE_CXX_STANDARD 17)
 
 include(FeatureSummary)
 
@@ -31,7 +32,7 @@ find_package(KF5 ${KF5_MIN_VERSION} REQUIRED COMPONENTS Kirigami2 CoreAddons Con
 
 add_subdirectory(src)
 
-install(PROGRAMS org.kde.saturnappimageeditor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
-install(FILES org.kde.saturnappimageeditor.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
+install(PROGRAMS io.github.tridentu.saturnappimageeditor.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES io.github.tridentu.saturnappimageeditor.metainfo.xml DESTINATION ${KDE_INSTALL_METAINFODIR})
 
 feature_summary(WHAT ALL INCLUDE_QUIET_PACKAGES FATAL_ON_MISSING_REQUIRED_PACKAGES)
